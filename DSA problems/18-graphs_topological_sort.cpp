@@ -49,7 +49,7 @@ int main() {
     g.addEdge(4,1);
     g.addEdge(3,1);
 
-    cout << "The topological Order of the Graph is : \n";
+    cout << "The topological Order of the Graph : \n";
     g.topoSort();
 
     return 0;
