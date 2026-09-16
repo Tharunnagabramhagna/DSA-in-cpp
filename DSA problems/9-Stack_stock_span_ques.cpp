@@ -31,7 +31,7 @@ int main()
     stack<int> s;
 
     stockSpan(price, ans, s);
-    cout << "Elements of the Span : \n";
+    cout << "Elements of the Stock : \n";
     for (int i : ans)
         cout << i << " ";
     cout << endl;
