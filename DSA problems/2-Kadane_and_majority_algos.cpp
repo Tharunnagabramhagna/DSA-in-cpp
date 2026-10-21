@@ -169,22 +169,21 @@ int main()
     }
 
     // 2) Brute-force Approach
-    n = 7;
-    int Arr[n] = {3, -4, 5, 4, -1, 7, -8};
+    vector<int>Arr = {3, -4, 5, 4, -1, 7, -8};
 
     int maxSum = INT_MIN;
 
-    for (int st = 0; st < n; st++)
+    for (int i = 0; i < Arr.size(); i++)
     {
         int currSum = 0;
-        for (int end = st; end < n; end++)
+        for (int j = i; j < Arr.size(); j++)
         {
-            currSum += Arr[end];
+            currSum += Arr[j];
             maxSum = max(currSum, maxSum);
         }
     }
 
-    cout << "Max sum of array = " << maxSum << endl;
+    cout << "Max sum of Arr = " << maxSum << endl;
 
     // 3) Kadane's Algorithm
     // most-optimised approach
@@ -196,7 +195,7 @@ int main()
     cin >> N;
     vector<int> nums(N);
     // input nums
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < nums.size(); i++)
     {
         cout << "Enter " << i << " index element = ";
         cin >> nums[i];
@@ -228,7 +227,7 @@ int main()
     vector<int> Nums(n1);
     // input Nums
     // Ex :- {2,3,7,11}
-    for (int i = 0; i < n1; i++)
+    for (int i = 0; i < Nums.size(); i++)
     {
         cout << "Enter " << i << " index element = ";
         cin >> Nums[i];
@@ -253,7 +252,7 @@ int main()
     cin >> n2;
     vector<int> mjbrVec(n2);
     // input mjVec
-    for (int i = 0; i < n2; i++)
+    for (int i = 0; i < mjbrVec.size(); i++)
     {
         cout << "Enter " << i << " index element = ";
         cin >> mjbrVec[i];
@@ -267,7 +266,7 @@ int main()
     cin >> n3;
     vector<int> opMjVec(n3);
     // input opMjVec
-    for (int i = 0; i < n3; i++)
+    for (int i = 0; i < opMjVec.size(); i++)
     {
         cout << "Enter " << i << " index element = ";
         cin >> opMjVec[i];
@@ -282,7 +281,7 @@ int main()
     cin >> n4;
     vector<int> majVec(n4);
     // input majVec
-    for (int i = 0; i < n4; i++)
+    for (int i = 0; i < majVec.size(); i++)
     {
         cout << "Enter " << i << " index element = ";
         cin >> majVec[i];
