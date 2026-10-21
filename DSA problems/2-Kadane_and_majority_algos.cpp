@@ -21,6 +21,20 @@ int maxSubArray(vector<int> &arr)
     return maxSum;
 }
 
+int minSubArray(vector<int> &arr)
+{
+    int currSum = 0, minSum = INT_MAX;
+
+    for (int val : arr)
+    {
+        currSum += val;
+        minSum = min(currSum, minSum);
+        currSum = (currSum > 0) ? 0 : currSum;
+    }
+
+    return minSum;
+}
+
 vector<int> pairSum(vector<int> &nums, int target)
 {
     vector<int> ans;
@@ -188,7 +202,8 @@ int main()
         cin >> nums[i];
     }
     // output
-    cout << "Max Sum of nums = " << maxSubArray(nums) << endl;
+    cout << "Maximum Sum of nums : " << maxSubArray(nums) << endl;
+    cout << "Minimum Sum of nums : " << minSubArray(nums) << endl;
 
     /* Pair Sum */
 
