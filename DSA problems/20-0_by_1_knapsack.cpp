@@ -25,7 +25,7 @@ int knapSack_01_Rec(vector<vector<int>> &items, int W, int n)
 
 /* Memorization DP */
 int knapSack_01_DPMemo(vector<vector<int>> &items, int W, int n, vector<vector<int>> &dp)
-{ // O(n * w) in both time and space complexity
+{ // O(n * w) for time complexity and space complexity is O(n * w) + O(n)
     // Base Case
     if (n == 0 || W == 0)
         return 0;
@@ -49,7 +49,7 @@ int knapSack_01_DPMemo(vector<vector<int>> &items, int W, int n, vector<vector<i
 
 /* Tabulation DP */
 int knapSack_01_DPTable(vector<vector<int>> &items, int W, int n)
-{
+{ // Both time and space complexity is O(n * w)
     vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));
 
     for (int i = 1; i <= n; i++)
@@ -68,6 +68,8 @@ int knapSack_01_DPTable(vector<vector<int>> &items, int W, int n)
 
     return dp[n][W];
 }
+
+
 
 int main()
 {
